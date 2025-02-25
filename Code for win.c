@@ -1,263 +1,120 @@
-// prob 4
+// prob 1
 #include <stdio.h>
 
 int main()
 {
-    int x;
-    
-    printf("Enter x value:");
-    scanf("%d",&x);
-
-    if (x%5 ==0)
-    {
-        printf("your value is divisible by 5\n");
-    }
-    else if (x%11==0)
-    {
-        printf("your value is divisible by 11\n");
-    } 
-    else 
-    {
-        printf("Number is not divisible by 5 and 11 \n");
-    }
-
-    return 0;
-}
-
-//prob 7 
-#include <stdio.h>
-
-int main()
-{
-  char x;
-  scanf("%c", &x);
-
-  if(x>='A' && x<='Z')
-  {
-        printf(" your value is alphabet");        
-  }
-  else if (x>='a' && x<='z' )
-  {
-        printf(" your value is alphabet");        
-  }
-  else  
-  {
-        printf(" your value is num");        
-  }
-  return 0;
-}
-
-//prob 8
-#include <stdio.h>
-
-int main()
-{
-  char x;
-  printf ("Enter the letter:\n");
-  scanf("%c", &x);
-
-  if(x == 'a')
-  {
-        printf(" your value is vowel");        
-  }
-  else if (x == 'e')
-  {
-        printf(" your value is vowel");        
-  }
-  else if(x == 'i')
-  {
-        printf(" your value is vowel");        
-  }
-  else if(x == 'o')
-  {
-        printf(" your value is vowel");        
-  }
-  else if(x == 'u')
-  {
-        printf(" your value is vowel");        
-  }
-  else
-  {
-        printf(" your value is consonant");        
-  }
-  return 0;
-}
-
-// prob 12
-#include <stdio.h>
-
-int main()
-{
-  int x;
-  int flag = 0;
-
-while(!flag)
-{
-      printf("Enter the number of the month:\n");
-      scanf("%d", &x);
-
-  if(x==1||x==3 ||x==5||x==7||x==8||x==10||x==12)
-  {
-        printf("31 Days\n");  
-        flag=1;      
-  }
-  else if (x==4||x==6||x==9||x==11)
-  {
-        printf("30 Days\n");        
-        flag=1;      
-  }
-  
-  else if(x == 2)
-  {
-        printf("28 Days\n"); 
-        flag=1;      
-  }       
-  else 
-  {
-      printf("wrong entered value, plz try again\n");
-  }
-}
-  return 0;
-}
-
-//prob 14
-#include <stdio.h>
-
-int main()
-{
-  float x,y,z;
-  
-  printf("Enter the first angle:\n");
-  scanf("%f",&x);
-  printf("Enter the second angle:\n");
-  scanf("%f",&y);
-  printf("Enter the third angle:\n");
-  scanf("%f",&z);
-
-  if(x+y+z==180)
-  {
-      printf("The triangle is valid");
-  }
-  else
- {
-      printf("The triangle is not valid");  
- }
-  return 0;
-}
-
-// prob 16
-#include <stdio.h>
-
-int main()
-{
-  float x,y,z;
-  
-  printf("Enter the length first side:\n");
-  scanf("%f",&x);
-  printf("Enter the length second side:\n");
-  scanf("%f",&y);
-  printf("Enter the length third side:\n");
-  scanf("%f",&z);
-
-  if(x==y && y==z)
-  {
-      printf("the Triangle is equilateral");
-  }
-  else if(x==y||y==z||z==x)
-  {
-      printf("the Triangle is Isosceles");
-  }
-  else
-  {
-      printf("the Triangle is Scalene");
+      int x;
       
-  }
+      printf ("Please enter the day number:\n");
+      scanf("%d",&x);
 
-  return 0;
+      switch (x)
+      {
+      case 1:
+            printf("MONDAY\n");
+            break;
+      case 2:
+            printf("TUESDAY\n");
+            break;
+      case 3:
+            printf("WEDNESDAY\n");
+            break;
+      case 4:
+            printf("THURSDAY\n");
+            break;
+      case 5:
+            printf("FRIDAY\n");
+            break;
+      case 6:
+            printf("SUNDAY\n");
+            break;
+      case 7:
+            printf("SATURDAY\n");
+            break;
+            
+      }
+
 }
-// prob 19
+
+// prob 7
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+      float a,b,c,root1,root2;
+      int delta;
+
+      printf("Enter coefficient of squr x:\n");
+      scanf("%f", &a);
+      printf("Enter coefficient of x:\n");
+      scanf("%f", &b);
+      printf("Enter the absolute value:\n");
+      scanf("%f", &c);
+      delta = (b*b) - 4*a*c;
+      
+      switch (delta>0 ? 1 :(delta == 0 ? 0 : -1))
+      {
+            case 1:
+                  root1= (-b + sqrt((b*b) - (4*a*c)))/(2*a);
+                  root2= (-b - sqrt((b*b) - (4*a*c)))/(2*a);
+                  printf("root1=%0.2f\nroot2=%0.2f", root1,root2);
+                  break;
+
+            case 0:
+                  root1=(-b)/(2*a);     
+                  root2 = root1;
+                  printf("root1=%0.2f\nroot2=%0.2f", root1,root2);
+                  break;
+
+            case -1:
+                  printf("no real roots"); 
+                  break;
+      }
+
+      
+     
+            
+     
+
+}
+
+//ptob 8
 #include <stdio.h>
 
 int main()
 {
-      float Physics, Chemistry, Biology, Mathematics ,Computer,sum,avg;
+    char operator ;
+    float x,num1 , num2;
 
+    printf("please enter the operator:");
+    scanf(" %c", &operator );
 
-      printf("Enter Mathematics grade:");
-      scanf("%f",&Mathematics);
-      printf("Enter Biology grade:");
-      scanf("%f",&Biology);
-      printf("Enter Chemistry grade:");
-      scanf("%f",&Chemistry);
-      printf("Enter Physics grade:");
-      scanf("%f",&Physics);
-      printf("Enter Computer grade:");
-      scanf("%f",&Computer);
+    printf("please enter the first number:");
+    scanf(" %f", &num1 );
 
-      sum = Physics+Chemistry+Biology+Mathematics+Computer;
-      avg= (sum/500)*100;
+    printf("please enter the second number:");
+    scanf(" %f", &num2);
 
-      if (avg>=90)
-      {
-            printf("your grade is A");
-      }
-      else if (avg>=80)
-      {
-            printf("your grade is B");
-      }
-      else if (avg>=70)
-      {
-            printf("your grade is C");
-      }
-      else if (avg>=60)
-      {
-            printf("your grade is D");
-      }
-      else if (avg>=50)
-      {
-            printf("your grade is E");
-      }
-      else if (avg>=40)
-      {
-            printf("your grade is F");
-      }
-      else
-      {
-          printf("you failed");
-      }
-  
-      // prob 20
-      #include <stdio.h>
-
-int main()
-{     
-      float basic_Salary,Gross_Salary,hra , da ;
-      printf("Enter your basic salary:");
-      scanf("%f",&basic_Salary);
-
-      if(basic_Salary<= 10000)
-      {
-            hra = basic_Salary * 0.2;
-            da = basic_Salary * 0.8;
-            Gross_Salary= basic_Salary + hra + da;
-            
-            printf("Gross salary:%f",Gross_Salary);
-      }
-      else if(10001 <= basic_Salary <= 20000)
-      {
-            hra = basic_Salary * 0.25;
-            da = basic_Salary * 0.9;
-            Gross_Salary= basic_Salary + hra + da;
-            
-            printf("Gross salary:%f",Gross_Salary);
-      }
-      else  if(basic_Salary<= 10000)
-      {
-            hra = basic_Salary >= 0.3;
-            da = basic_Salary * 0.95;
-            Gross_Salary= basic_Salary + hra + da;
-            
-            printf("Gross salary:%0.2f",Gross_Salary);
-      }
-  return 0;
+    switch (operator )
+    {
+    case '-':
+        x=num1 - num2;
+        printf("%0.2f - %0.2f = %0.2f",num1,num2,x);
+        break;
+    case '+':
+        x=num1 +num2;
+        printf("%0.2f + %0.2f = %0.2f",num1,num2,x);
+        break;
+    case '/':
+        x=num1 / num2;
+        printf("%0.2f / %0.2f = %0.2f",num1,num2,x);
+    break;
+    case '*':
+        x=num1 *num2;
+        printf("%0.2f * %0.2f = %0.2f",num1,num2,x);
+        break;
+    default
+        printf("wrong operator");
+    }
 }
