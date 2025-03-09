@@ -41,6 +41,7 @@ int main()
     bool run=1,overnight_checker1;
     data item[items_number];
 
+    printf("Welcome to our small shop🤗\n\n")
     while(run){
         //num of items 
         if (counter == 1)
