@@ -93,3 +93,34 @@ int main ()
         printf("%d ",*ptr2);
     }
 }
+
+//prob 7 
+#include <stdio.h>
+
+int main ()
+{
+    int len;
+    printf("Enter the length of the array:\n");
+    scanf("%d",&len);
+
+    int a[len];
+    printf("Enter the elements of the array:\n");
+    for(int i=0;i<len;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+   
+    printf("reversed array:");
+    for(int i=len-1;i>=0;i--)
+    {
+        int* ptr=&a[i];
+        printf("%d ", *ptr);
+
+    }
+
+
+   
+}
+
+//prob 8
