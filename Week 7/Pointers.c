@@ -124,3 +124,136 @@ int main ()
 }
 
 //prob 8
+#include <stdio.h>
+
+int main ()
+{
+    int len,s;
+    printf("Enter the length of the array:\n");
+    scanf("%d",&len);
+
+    int a[len];
+    printf("Enter the elements of the array:\n");
+    for(int i=0;i<len;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+    printf("Enter the element you want to search:");
+    scanf("%d",&s);
+
+    for(int i=0;i<len;i++)
+    {
+        int *ptr=&a[i];
+        if(*ptr==s)
+        {
+            printf("Your element %d is the number %d of the array",s,i+1);
+            return 0;
+        }
+    }
+    printf("Your elment %d doesent exist in the array",s);
+
+
+   
+}
+//prob 11 
+//skip or now 
+
+
+//prob 12
+//مش محتاجه pointers اوي
+#include <stdio.h>
+
+int main ()
+{
+    int len=0;
+    char input[100];
+
+    printf("Enter your sentence:");
+    fgets(input,100,stdin);
+    fflush;
+    for(int i=0;i<=100;i++)
+    {
+        if(input[i]/10!=0)
+        {
+            len++;
+            continue;
+        }
+        else if(input[i]/10000!=0)
+        {
+            len++;
+            continue; 
+        }
+        else
+        break;
+      
+    }
+
+    printf("%d",len-1);
+    
+    return 0;
+   
+}
+
+//prob 14
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+
+    char a[100],b[100];
+    
+    printf("Enter your first string:");
+    fgets(a,100,stdin);
+    a[strcspn(a,"\n")]='\0';
+    printf("Enter your second string:");
+    fgets(b,100,stdin);
+    b[strcspn(b,"\n")]='\0';
+
+    printf("Your combined string\n");
+    printf("%s ",a);
+    printf("%s",b);
+
+
+
+
+}
+
+//prob 16
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int len;
+    char a[100],b[100];
+    
+    printf("Enter your string:");
+    fgets(a,100,stdin);
+    
+    for(int i=0;i<=100;i++)
+    {
+        if(a[i]/10!=0)
+        {
+            len++;
+            continue;
+        }
+        else if(a[i]/10000!=0)
+        {
+            len++;
+            continue; 
+        }
+        else
+        break;
+      
+    }
+
+    for (int i=len-1;i>=0;i--)
+    {
+        printf("%c",a[i]);
+    }
+
+
+
+}
