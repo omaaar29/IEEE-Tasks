@@ -1,9 +1,3 @@
-//الماتريكس وبتاع الاسبوع اللي فات هعملهم بكره او بعده بالكتير
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 7ab5982059051a10a5b152d8e1a53558e5ff65ed
 //prob 5
 #include <stdio.h>
 
@@ -262,4 +256,29 @@ int main()
 
 
 
+}
+
+//Hacker rank
+#include <stdio.h>
+
+void update(int *a,int *b) {
+  int temp=*a;
+    *a=*a+*b;
+
+    
+    if(temp>*b)
+        *b=temp-*b;
+    else
+        *b=*b-temp; 
+}  
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+    return 0;
 }
