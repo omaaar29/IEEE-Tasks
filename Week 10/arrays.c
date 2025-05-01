@@ -47,3 +47,38 @@ int main()
   
 
 }
+
+//problem 5
+#include<stdio.h>
+
+int main()
+{
+    int size;
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+
+    int arr[size],x=0,largest,second_largest;
+    for(int i=0;i<size;i++)
+    {
+        printf("Enter the %d element of the array: ",++x);
+        scanf("%d",&arr[i]);
+    }
+
+    largest=arr[0];
+    for(int i=0;i<size;i++)
+    {
+        if(largest<arr[i])
+            largest=arr[i];
+    }
+     second_largest=arr[0];
+    for(int i=0;i<size;i++)
+    {
+        if(second_largest<arr[i] && arr[i]<largest)
+            second_largest=arr[i];
+
+    }
+        printf("%d",second_largest);
+
+}
+
+//problem 
