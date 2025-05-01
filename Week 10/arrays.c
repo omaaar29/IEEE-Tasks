@@ -81,4 +81,37 @@ int main()
 
 }
 
-//problem 
+//problem 8
+#include<stdio.h>
+
+int main()
+{
+    int size;
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+
+    int arr1[size],x=0,largest,second_largest;
+    for(int i=0;i<size;i++)
+    {
+        printf("Enter the %d element of the array: ",++x);
+        scanf("%d",&arr1[i]);
+    }
+    int arr2[size];
+    for(int i=0;i<size;i++)
+    {
+        arr2[i]= arr1[i]; 
+    }
+    printf("your main arr: ");
+    for(int i=0;i<size;i++)
+    {
+        printf("%d ",arr1[i]);
+    }
+
+    printf("\nyour copied arr: ");
+    for(int i=0;i<size;i++)
+    {
+        printf("%d ",arr2[i]);
+    }
+}
+
+//problem 9
