@@ -169,3 +169,57 @@ int main()
 }
 
 //problem 13
+#include<stdio.h>
+
+
+int is_counted(int *p , int x , int check)
+    {
+        for (;x>=0;x--)
+        {
+            if(check==p[x])
+                return 1;
+        }
+
+        return 0;
+    }
+
+int main()
+{
+    int size, x=0 , duplication=0;
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+
+   
+    int arr[size];
+    for(int i=0;i<size;i++)
+    {
+        printf("Enter the %d element of the array: ",++x);
+        scanf("%d",&arr[i]);
+    }
+    int *p = arr;
+    int temp_num;
+    for(int x=0;x<size ; x++)
+    {
+        int temp_arr_element=arr[x];
+        int temp_arr_position=x;
+
+        if (is_counted(p ,--temp_arr_position,temp_arr_element))
+        {
+            continue;
+        }
+        else
+        {
+            for(int i=++temp_arr_position;i<size ; i++)
+            {
+                    
+                    if(temp_arr_element == arr[i]&& is_counted(p ,(i-1),arr[i]))
+                    {
+                        duplication++;
+                    }
+            }
+        }
+
+    } 
+    printf("Total number of duplicate elements = %d",duplication);
+}
+//prob
